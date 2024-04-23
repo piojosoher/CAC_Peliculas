@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+p{
+    background-color: green;
+}
+*/
+header {
+    background-color: blueviolet;
+}
+
+.colorChoco{
+    background-color:chocolate;
+    color: beige;
+}
+
+.colorAzul{
+    background-color: blue;
+}
+
+#colorAmarrillo{
+    background-color:darkgoldenrod;
+}
+
+.colorVerde{
+    background-color: green;
+}
+
+/*Selector descendiente */

@@ -8,8 +8,8 @@ https://colorhunt.co/palette/35374b34495550727b78a083
 #50727B
 #78A083
 */
-
-
+/*Animaciones*/
+/*Reseteo de valores*/
 *{
     margin: 0;
     padding: 0;
@@ -40,8 +40,9 @@ main{
   'opsz' 40
 }
 
-h1{
+h1, h2{
    color: white;
+   text-align: center;
 }
 
 p{
