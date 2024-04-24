@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;/*Grosor de la letra*/
+    font-style: Italic;
+}
+
+:root{
+    --main-color:white;
+    --secondary-color: #1b1b1a;
+    --third-color: rgb(49, 49, 51);
+}
+
+body{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight:700;
+    margin-bottom: 20px;
+}
+
+header, footer{
+    background-color: var(--third-color);
+    color: var(--main-color);
+    padding: 10px;
+}
+
+/*Fijo el header 15vh y para que al scrollar no se baje*/
+.header{
+    height: 15vh;
+    position: sticky;
+    top:0;
+    nav{
+        display: flex;
+        align-items: center;
+        background-color: green;
+        ul{
+            list-style: none;
+            display: flex;
+            background-color: red;
+        }
+
+    }
+
+    .LogoCACFlix{
+        height: 50px;
+    }
+    a{
+        text-decoration: none;
+        color: var(--main-color);
+    }
+
+}
+
+/*Completo el resto del la paginaen 85vh 100-15 del header*/
+.sectionTitulo{
+    height: 85vh;
+    /* background: linear-gradient(to bottom, #000000a3, #000000a3), url("../assets/img/fondoMovie2.jpeg"); */
+    background: linear-gradient(to bottom, #1b1b1b96, #1b1b1b96), url("../assets/img/fondoMovie2.jpeg");
+    background-position: center;/*Centro la img*/
+    background-size: cover; /*Que ocuoe todo el espacio disponible*/
+    background-repeat: no-repeat;/*No repita la img*/
+
+    .contenedorTitulo{
+        text-align: center;    
+        /*backdrop-filter: blur(10px);*//*Efecto desenfocado*/
+        /*Centrado y que no ocupe todo el ancho*/
+        width: 60%;
+        margin: 0 auto; /*Para que me centre el div*/
+        padding-top: 50px; /*Bajo un poco el texto que esta dentro de este contenedor*/
+        /*Boton registrate*/
+        a{
+            margin-top: 20px;
+            display: inline-block;/*Al ser en del tipo en line, para poder darle ancho y alto..*/
+            text-decoration: none;
+            color: var(--main-color);
+            font-size: 2rem;
+            border: 2px solid var(--main-color);
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
