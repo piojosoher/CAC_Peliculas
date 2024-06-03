@@ -36,22 +36,27 @@ h2{
 header, footer{
     background-color: var(--third-color);
     color: var(--main-color);
-    padding: 10px;
+    padding: 20px;
 }
 
 /*Fijo el header 15vh y para que al scrollar no se baje*/
 .header{
-    height: 15vh;
+    height: 10vh;
     position: sticky;
     top:0;
     nav{
+        height: 100%;;
         display: flex;
         align-items: center;
-        background-color: green;
+        /* background-color: green; */
+        justify-content: space-between;
+
         ul{
+            font-size: 1.4rem;
             list-style: none;
             display: flex;
-            background-color: red;
+            /* background-color: red; */
+            column-gap: 20px;
         }
 
     }
@@ -74,6 +79,9 @@ header, footer{
     background-position: center;/*Centro la img*/
     background-size: cover; /*Que ocuoe todo el espacio disponible*/
     background-repeat: no-repeat;/*No repita la img*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .contenedorTitulo{
         text-align: center;    
@@ -81,7 +89,8 @@ header, footer{
         /*Centrado y que no ocupe todo el ancho*/
         width: 60%;
         margin: 0 auto; /*Para que me centre el div*/
-        padding-top: 50px; /*Bajo un poco el texto que esta dentro de este contenedor*/
+        /*Lo corrijo en la etiqueta padre con display, justify y align */
+        /*padding-top: 50px;*/ /*Bajo un poco el texto que esta dentro de este contenedor*/
         /*Boton registrate*/
         a{
             margin-top: 20px;
@@ -96,8 +105,94 @@ header, footer{
         
     }
 }
+.sectionBuscar{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.peliculasTendencias{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    h2{
+        /* margin: 20px 0; */
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .galeriaTendencias{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        div{
+            width: 250px;
+            height: 350px;
+            box-shadow: 10px 10px 47px -6px rgba(255, 255, 255, 0.40); /* Iluminosisdad a las tarjetas */
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        };
+    }
+    button{
+        margin-bottom: 20px;
+    }
+}
 
 
+.peliculasAclamadas{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+
+    h2{
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .galeriaAclamadas{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        gap: 20px;
+
+        div{
+            width: 200px;
+            height: 350px;
+            flex-shrink: 0;
+            /* box-shadow: 10px 10px 47px -6px rgba(255, 255, 255, 0.40); */ /* Iluminosisdad a las tarjetas */
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        };
+    }
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.galeriaAclamadas::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.galeriaAclamadas::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.galeriaAclamadas::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
 
 
 
