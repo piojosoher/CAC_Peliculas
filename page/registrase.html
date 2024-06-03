@@ -36,6 +36,7 @@
                     <h2>Registro</h2>
                     <div>
                         <input type="text" placeholder="Nombre" id="nombre" required>
+                        <span id="nombreOK"></span>
                     </div>
                     <div>
                         <input type="text" placeholder="Apellido" id="apellido" required>
@@ -78,6 +79,20 @@
         </section>
 
     </main>
+
+    <script>
+        document.getElementById('nombre').addEventListener('input', function() {
+            campo = event.target;
+            valido = document.getElementById('nombreOK');
+                
+            nombreRegex = ([A-Za-z]);
+            if (nombreRegex.test(campo.value)) {
+            valido.innerText = "Nombre válido";
+            } else {
+            valido.innerText = "El nombre no puede tener números";
+            }
+        });
+    </script>
     
 </body>
 </html>
