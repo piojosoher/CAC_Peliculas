@@ -195,12 +195,22 @@ header, footer{
 }
 
 
+/*Pagina InicioSesion*/
+.FormLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
 
-
-
+/*Pagina Registrase*/
+.FormRegistrarse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
