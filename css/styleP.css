@@ -1,32 +1,52 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital@1&display=swap');
+
+/* Paleta de colores
+https://colorhunt.co/palette/35374b34495550727b78a083
+#35374B
+#344955
+#50727B
+#78A083
+*/
+/*Animaciones*/
+/*Reseteo de valores*/
 *{
     margin: 0;
     padding: 0;
+    /* font-family: "Noto Sans", sans-serif; */
+    font-family: 'Nunito', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;/*Grosor de la letra*/
+    font-style: Italic;
+
 }
 
-/*
+header, footer{
+    background-color: #35374b;
+}
+main{
+    /* background del site */
+    background: rgb(53,55,75);
+    background: linear-gradient(180deg, rgba(53,55,75,1) 0%, rgba(210,212,214,1) 50%, rgba(53,55,75,1) 100%);
+}
+
+
+/* Flecha pagina inicial. Ir arriba */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
+}
+
+h1, h2{
+   color: white;
+   text-align: center;
+}
+
 p{
-    background-color: green;
-}
-*/
-header {
-    background-color: blueviolet;
-}
+    color: white;
+    text-align: justify;
 
-.colorChoco{
-    background-color:chocolate;
-    color: beige;
 }
-
-.colorAzul{
-    background-color: blue;
-}
-
-#colorAmarrillo{
-    background-color:darkgoldenrod;
-}
-
-.colorVerde{
-    background-color: green;
-}
-
-/*Selector descendiente */

@@ -1,52 +1,312 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital@1&display=swap');
 
-/* Paleta de colores
-https://colorhunt.co/palette/35374b34495550727b78a083
-#35374B
-#344955
-#50727B
-#78A083
-*/
-/*Animaciones*/
-/*Reseteo de valores*/
 *{
     margin: 0;
     padding: 0;
-    /* font-family: "Noto Sans", sans-serif; */
+    box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;/*Grosor de la letra*/
     font-style: Italic;
+}
 
+:root{
+    --main-color:white;
+    --secondary-color: #1b1b1a;
+    --third-color: rgb(49, 49, 51);
+    --azul-color: #4d7ec9;
+}
+
+body{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight:700;
+    margin-bottom: 20px;
 }
 
 header, footer{
-    background-color: #35374b;
+    background-color: var(--third-color);
+    color: var(--main-color);
+    padding: 20px;
 }
-main{
-    /* background del site */
-    background: rgb(53,55,75);
-    background: linear-gradient(180deg, rgba(53,55,75,1) 0%, rgba(210,212,214,1) 50%, rgba(53,55,75,1) 100%);
+
+/*Fijo el header 15vh y para que al scrollar no se baje*/
+.header{
+    height: 10vh;
+    position: sticky;
+    top:0;
+    .LogoCACFlix{
+        height: 50px;
+    }
+    nav{
+        height: 100%;;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: green; */
+        margin-left:20px;
+        margin-right: 20px;
+        .listaNav{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            .linkNav{
+                margin-right:10px;
+                text-decoration: none;
+                color: var(--main-color);
+                font-size: 1.2rem;
+                padding: 0.5rem 1rem;
+                /* Agregar efecto de botón presionado */
+                transition: transform 0.3s, box-shadow 0.3s;
+                background-color: #7073826c;
+                color: white;
+                border-radius: 5px;
+            }
+            .linkNav.activarBotonNav{
+                background-color: #7073826c;
+                color: white;
+                border-radius: 5px;
+                /* Agregar efecto de botón presionado */
+                transition: transform 0.3s, box-shadow 0.3s;
+                &:hover {
+                    background-color: var(--azul-color);
+;
+                    ;
+                }
+            }
+        }
+           
+    }
 }
 
 
-/* Flecha pagina inicial. Ir arriba */
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 40
+/*Completo el resto del la paginaen 85vh 100-15 del header*/
+.sectionTitulo{
+    height: 85vh;
+    /* background: linear-gradient(to bottom, #000000a3, #000000a3), url("../assets/img/fondoMovie2.jpeg"); */
+    background: linear-gradient(to bottom, #1b1b1b96, #1b1b1b96), url("../assets/img/fondoMovie2.jpeg");
+    background-position: center;/*Centro la img*/
+    background-size: cover; /*Que ocuoe todo el espacio disponible*/
+    background-repeat: no-repeat;/*No repita la img*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contenedorTitulo{
+        text-align: center;    
+        /*backdrop-filter: blur(10px);*//*Efecto desenfocado*/
+        /*Centrado y que no ocupe todo el ancho*/
+        width: 60%;
+        margin: 0 auto; /*Para que me centre el div*/
+        /*Lo corrijo en la etiqueta padre con display, justify y align */
+        /*padding-top: 50px;*/ /*Bajo un poco el texto que esta dentro de este contenedor*/
+        /*Boton registrate*/
+        a{
+            margin-top: 20px;
+            display: inline-block;/*Al ser en del tipo en line, para poder darle ancho y alto..*/
+            text-decoration: none;
+            color: var(--main-color);
+            font-size: 2rem;
+            border: 2px solid var(--main-color);
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+        
+    }
+}
+.sectionBuscar{
+    text-align: center;
+    margin: 20px 0;
+    .inputBuscar{
+        border: 2px solid white;
+        border-radius: 10px;
+        color:#ffffff;
+        font-size: 1.2rem;
+        height: 50px;
+        margin: 20px 0px;
+        outline: none;
+        padding: 0px 20px;
+        width: 500px;
+    }
+    .botonBuscar{
+        background-color:var(--azul-color);;
+        display: inline-block;
+        color:#ffffff;
+        height: 50px;
+        margin: 20px 10px;
+        padding:0 20px;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        border: 2px solid white;
+    }
 }
 
-h1, h2{
-   color: white;
-   text-align: center;
+.peliculasTendencias{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    h2{
+        /* margin: 20px 0; */
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .galeriaTendencias{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        div{
+            width: 250px;
+            height: 350px;
+            box-shadow: 10px 10px 47px -6px rgba(255, 255, 255, 0.40); /* Iluminosisdad a las tarjetas */
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        };
+    }
+    button{
+        margin-bottom: 20px;
+    }
 }
 
-p{
-    color: white;
-    text-align: justify;
+
+.peliculasAclamadas{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+
+    h2{
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .galeriaAclamadas{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        gap: 20px;
+
+        div{
+            width: 200px;
+            height: 350px;
+            flex-shrink: 0;
+            /* box-shadow: 10px 10px 47px -6px rgba(255, 255, 255, 0.40); */ /* Iluminosisdad a las tarjetas */
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        };
+    }
+}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.galeriaAclamadas::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.galeriaAclamadas::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.galeriaAclamadas::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+
+
+/*Pagina Registrase*/
+/*
+.FormRegistrarse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*     background:linear-gradient(to right top, #24242473,#24242473),url("../assets/img/bg_cinema.jpg");
+    background-size: cover;
+    background-position: center; 
+}*/
+
+
+/*Pagina InicioSesion*/
+/*.FormLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(to right top, #24242473,#24242473),url("../assets/img/bg-register.jpg");
+    background-size: cover;
+    background-position: center;
+}*/
+
+/*Pagina InicioSesion */ /*y Registrase*/
+.mainSesion{
+    background: url("../assets/img/fondoMovie1.jpeg");
+    background-size: cover;
+    background-position: center;
+    .FormLogin{
+                background-color: var(--third-color);
+                width: 40%;
+                margin:0 auto;
+                border-radius: 10px;
+                padding: 40px 20px;
+                display: flex;
+                flex-direction:column;
+                justify-content: center;
+                align-items: center;
+                height: 90vh;
+                font-size:1.2rem;
+                .tituloRegistrarse{
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
+                form{
+                    width: 100%;
+                    padding:40px;
+                    input:not(.check,.boton),select{
+                        width: 100%;
+                        margin-bottom: 10px;
+                        height: 40px;
+                        padding: 0px 20px;
+                        font-size: 1.2rem;
+                        border-radius: 10px;
+                        border: 2px solid var(--azul-color);
+                        outline: none;
+                        color:#333333;
+                    }
+                    .btnIniciar{
+                        background-color: #4d7ec9;
+                        color: #4d7ec9;
+                    }
+                    .linkRegistrase{
+                        margin-top:40px;
+                        font-size: 1rem;
+                        text-decoration: none;
+                        color: #787878;
+                        font-weight:400;                       
+                    }
+                }
+            
+            }
 
 }
